@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/static/css/login.css">
+  </script>
+</head>
+
+<body>
+
+  <div class=" short container-login ">
+    <div class="button-box">
+      <div class="btn"></div>
+      <button type="button" class="log" onclick="login()">Login</button>
+      <button type="button" class="log" onclick="register()">Register</button>
+    </div>
+    <div class="form-input" id="Login">
+      <form action="/login" method="POST" class="form-signin">
+        <input type="text" class="input-btn" id="username_login"  placeholder="Username"  required  name="username">
+
+        <input type="password" class="input-btn" placeholder="Password" required name="password">
+        <input type="checkbox" class="check" required><span class="check-content">Remember password</span>
+
+        <button type="submit" id="login-btn" class="submit-btn">Log in</button>
+      </form>
+
+      <div class="divide">
+        <div class="line"></div>
+        <div class="or_text">OR</div>
+        <div class="line"></div>
+      </div>
+
+      <div class="icon_option">
+        <img class="icon" src="/static/images/icon/f_icon.png" alt="">
+        <img class="icon" src="/static/images/icon/g_icon.png" alt="">
+        <img class="icon" src="/static/images/icon/i_icon.png" alt="">
+      </div>
+    </div>
+    <form id="register" action="/register" method="POST"  class="form-input">
+      <input type="text" class="input-btn" id="username_register"  placeholder="Username\Name" required name="username">
+      <input type="email" class="input-btn" id="email" placeholder="Email" required name="email">
+     
+      <input type="tel" class="input-btn"  placeholder="Mobile Number" name="phone">
+      <input type="password" class="input-btn" placeholder=" Create Password" name="password" >
+      <input type="password" class="input-btn" placeholder=" Confirm Password" name="confirmpassword" >
+      <input type="checkbox" class="check" required><span class="check-content">I agree with all terms and
+        condition</span>
+      <Button type="submit" class="submit-btn" id="register-btn"  value="Register">Register</Button>
+      <div class="divide">
+       
+    </form>
+  </div>
+  <script src="/static/javascript/login.js"></script>
+</body>
+
+
+</html>

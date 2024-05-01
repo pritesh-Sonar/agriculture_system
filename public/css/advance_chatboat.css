@@ -1,0 +1,174 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html{
+  font-size: 62.5%;
+}
+body{
+  background: #E3F2FD;
+
+}
+
+.chatbot{
+  position: fixed;
+  right: 4rem;
+  bottom: 10rem;
+  width: 42rem;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 1.5rem;
+  transform-origin: bottom right;
+  box-shadow: 0 0 12.8rem 0 rgba(0, 0, 0, 0.1), 0 3.2rem 6.4rem -4.8rem rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+}
+
+.chatbot header {
+  background: #4ae867;
+  padding: 1.6rem 0;
+  text-align: center;
+  position: relative;
+}
+.chatbot header h1 {
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+.chatbot header h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.chatbot .chatbox{
+  height: 51rem;
+  overflow-y: auto;
+  padding: 3rem 2rem 10rem;
+}
+.chatbox .chat{
+  display: flex;
+
+}
+.chatbox .incoming span{
+  height: 3.2rem;
+  width: 3.2rem;
+  background: #4ae867;
+  color: #fff;
+  align-self: flex-end;
+  text-align: center;
+  line-height: 3.2rem;
+  border-radius: 0.4rem;
+  margin: 0 1rem 0.7rem 0;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+
+.chatbox .outgoing{
+  margin: 2rem 0;
+  justify-content: flex-end;
+}
+.chatbox .chat p {
+  color: #fff;
+  max-width: 75%;
+  white-space: pre-wrap;
+  font-size: 1.5rem;
+  padding: 1.2rem 1.6rem;
+  border-radius: 1rem 1rem 0 1rem;
+  background: #4ae867;
+  -webkit-border-radius: 1rem 1rem 0 1rem;
+  -moz-border-radius: 1rem 1rem 0 1rem;
+  -ms-border-radius: 1rem 1rem 0 1rem;
+  -o-border-radius: 1rem 1rem 0 1rem;
+}
+.chatbox .incoming p {
+  color: #000;
+  background: #f2f2f2;
+  border-radius: 1rem 1rem 1rem 0;
+  -webkit-border-radius: 1rem 1rem 1rem 0;
+  -moz-border-radius: 1rem 1rem 1rem 0;
+  -ms-border-radius: 1rem 1rem 1rem 0;
+  -o-border-radius: 1rem 1rem 1rem 0;
+}
+.chatbot .chat-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0.5rem 2rem;
+  border-top: 0.1rem solid #ccc;
+ 
+}
+
+
+
+.chat-input div {
+  height: 5.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  resize: none;
+  padding: 1.6rem 1.5rem 1.6rem 0;
+  line-height: 1.5;
+}
+.chat-input span{
+  align-self: flex-end;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  color: #4ae867;
+  font-size: 2rem;
+  cursor: pointer;
+ 
+}
+
+@media(max-width: 490px) {
+  .chatbot {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .chatbot .chatbox {
+    height: 90%;
+
+  }
+ 
+}
+
+
+#click_to_record{
+	
+  background: #0ea4da;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+
+#click_to_record img{
+    width: 40px;
+    height: 40px;
+object-fit: contain;
+position: absolute;
+right: 100px;
+bottom:115px;
+}
+
+

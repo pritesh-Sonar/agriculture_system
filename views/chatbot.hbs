@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Chatbot </title>
+  <link rel="stylesheet" href="/static/css/advance_chatboat.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <script src="/static/javascript/advance_chat_boat.js" defer></script>
+</head>
+
+<body>
+  <div class="chatbot">
+    <header>
+      <h1>Chatbot</h1>
+      <label for="lang">
+        <h2>Choose Language:</h2>
+      </label>
+
+      <select id="lang" onchange="myfun()">
+        <option value="en" >English</option>
+        <option value="ma">Marathi</option>
+        <option value="hi">Hindi</option>
+
+      </select>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there <br>How can I help you today?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      
+      <div id="convert_text" contenteditable="true" placeholder="Enter your text..."></div>
+      <span id="send-btn" class="material-symbols-outlined">send</span>
+    </div>
+    
+  </div>
+  <button id="click_to_record"><img src="/static/images/icon/voice_icon.png" alt=""></button>
+  <script type="text/javascript" src="/static/javascript/advance_chat_boat2.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/cart.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Order.com</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <p>your order</p>
+        </div>
+    </nav>
+
+    <div class="my-order container">
+        <table class="my-table">
+            <tr class="tr">
+                <th>Product Name</th>
+                <th>Prize</th>
+                <th>Quantity</th>
+                <th>Total prize</th>
+                <th>Packaging</th>
+            </tr>
+            {{#each myData}}
+            <tr>
+                <td>{{this.Pro_name}}</td>
+                <td>{{this.Pro_price}}</td>
+                <td>{{this.Pro_Quantity}}</td>
+                <td>{{this.Pro_price}} * {{this.Pro_Quantity}}</td>
+                <td>{{this.Pro_pack}}</td>
+            </tr>
+            {{/each}}
+               
+        </table>
+    </div>
+    {{!-- <div class="back-arrow"><i class='bx bx-left-arrow-alt'></i></div> --}}
+    <script src="/static/javascript/experties.js"></script>
+</body>
+
+</html>

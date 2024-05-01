@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crops Details</title>
+    <link rel="stylesheet" href="/static/css/product_details.css">
+    <script src="../javascript/object.js"></script>
+</head>
+
+<body id="data-show-me">
+ <header class="container bg-color">
+    
+        <div class="heading">
+            <p>{{CropInfo.Name}}</p>
+            
+        </div>
+    </header>
+
+    <div class="image-description container">
+        <div class="img-fluid">
+            <img src="{{CropInfo.Image}}" alt="">
+        </div>
+    </div>
+
+    <main class="content container">
+        <p class="advice">you can listen it</p>
+        <audio src="{{CropInfo.audio}}" controls></audio>
+
+        <div class="intro">
+            <p class="head-crop">{{CropInfo.Name}}</p>
+            <p class="description">{{CropInfo.Description}} </p>
+        </div>
+        <div class="climate">
+            <p class="head-crop">climate</p>
+            <p class="description">{{CropInfo.Climate}}</p>
+        </div>
+
+        <div class="soli">
+            <p class="head-crop">soil</p>
+            <p class="description">{{CropInfo.Soil}} </p>
+        </div>
+    </main>
+
+    <main class="deases container">
+        <p class="head-crop">Crop Diseases</p>
+
+        <div class="one">
+
+            <li class="deases-head">{{CropInfo.Name1}}</li>
+            <div class="d-img">
+                <img class="deasese-img" src="{{CropInfo.Image1}}" alt="">5
+            </div>
+            <p class="description">${{CropInfo.Description1}}</p>
+
+            <div class="yt-solution">
+                <p>click here to watch solution</p>
+                <a href="{{CropInfo.video1}}">click me</a>
+            </div>
+        </div>
+        <div class="two">
+
+            <li class="deases-head">{{CropInfo.Name2}}</li>
+            <div class="d-img">
+                <img class="deasese-img" src="{{CropInfo.Image2}}" alt="">
+            </div>
+            <p class="description">{{CropInfo.Description2}}</p>
+
+            <div class="yt-solution">
+                <p>click here to watch solution</p>
+                <a href="{{CropInfo.video2}}">click me</a>
+            </div>
+
+        </div>
+
+        <div class="three">
+
+            <li class="deases-head">{{CropInfo.Name3}}</li>
+            <div class="d-img">
+                <img class="deasese-img" src="{{CropInfo.Image3}}" alt="">
+            </div>
+            <p class="description">{{CropInfo.Description3}} </p>
+
+            <div class="yt-solution">
+                <p>click here to watch solution</p>
+                <a href="{{CropInfo.video3}}">click me</a>
+            </div>
+        </div>
+
+        <div class="four">
+
+            <li class="deases-head">{{CropInfo.Name4}}</li>
+            <div class="d-img">
+                <img class="deasese-img" src="{{CropInfo.Image4}}" alt="">
+            </div>
+
+            <p class="description">{{CropInfo.Description4}}</p>
+
+            <div class="yt-solution">
+                <p>click here to watch solution</p>
+                <a href="{{CropInfo.video4}}">click me</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

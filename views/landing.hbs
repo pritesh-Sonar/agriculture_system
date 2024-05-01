@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krushi Sevak</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="/static/css/landing page.css">
+    
+</head>
+
+<body>
+    <div class="accout-of-data"></div>
+    <header class="section-navbar">
+        <div class="container">
+            <div class="header-card">
+                <img class="my_img" src="/static/images/icon/P.png" alt="">
+
+                <input type="text" class="search" id="search-me" placeholder="search">
+
+
+                <nav>
+                    <ul>
+                        <li><a href="/login/landing">Home</a></li>
+                        <li><a href="/login/landing/experties">Experties</a></li>
+                        <li><a href="/login/landing/products">Product</a></li>
+
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">Dropdown</button>
+                                <div class="dropdown-content">
+                                    <a href="/login/landing/gallary">Photo Gallery</a>
+                                    <a href="/login/landing/chatbot">Chat Bot</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#contact-us">Contact us</a></li>
+                        <li><a href="/login/landing/help">Help</a></li>
+                    </ul>
+                </nav>
+
+                <div class="two-option">
+
+                    <img class="my_img" onClick="location.href='/login/landing/cart'" src="/static/images/icon/cart.png"
+                        alt="">
+
+                    <div class="two-logo">
+                        <div class="two" onclick="display()">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+
+                        <img onclick="account_display()" class="my_img" src="/static/images/icon/user.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="slide-bar ">
+        <div class="container">
+            <div class="slides1">
+            </div>
+            <div class="slides2"></div>
+        </div>
+    </main>
+
+    <main class="opt-bar opt-bar-not-display" id="dis">
+        <ul>
+            <li><a href="/login/landing">Home</a></li>
+            <li><a href="/login/landing/experties">Experties</a></li>
+            <li><a href="/login/landing/products">Product</a></li>
+            <li><a href="/login/landing/gallary">gallery</a></li>
+            <li><a href="/login/landing/chatbot">Chatboat</a></li>
+            <li><a href="/login/landing/help">Help</a></li>
+            <li onclick="not_display()">Exit</li>
+        </ul>
+    </main>
+
+    <main class="Account  opt-bar-not-display" id="acc-data">
+        <img onclick="account_not_display()" class="cross" src="/static/images/icon/cancel.png" alt="">
+        <img src="/static/images/icon/user.png" class="acc-img" alt="">
+
+        <p class="username" id="my-use-name">{{userUsername.username}}</p>
+
+        <div class="my_full_data">
+            <div class="email-detail">
+                <p class="e-head">email-</p>
+                <p class="my-email" id="my-main-email">{{userUsername.email}}</p>
+            </div>
+            <p class="ch-btn" id="change-btn-email">Change email</p>
+
+            <div class="mob-details">
+                <p id="m-head">Mobile Number-</p>
+                <div class="serial">
+                    <p id="my-mb-num">{{userUsername.phone}}</p>
+                </div>
+
+
+            </div>
+            <p class="ch-btn-num" id="change-btn-num">Change Number</p>
+
+            <div class="location">
+                <p class="l-head">Location-</p>
+                <p class="detail">India</p>
+            </div>
+
+        </div>
+
+        <div class="three-option">
+            <ul>
+                <div class="two-pro">
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Setting</a></li>
+                </div>
+                <li><a href="/login">Log Out</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <main class="advertise">
+        <div class="container">
+            <p class="welcome-head">WELCOME TO KRUSHI SEVAK</p>
+            <p class="wel-desc"><b>{{UpdateData.Quote}}</b></p>
+            <div class="three-section">
+                <div class="add-sec">
+                    <div class="qua-img">
+                        <img src="/static/images/icon/best-quality.png" alt="">
+                    </div>
+                    <p class="quality-head">Best Quality</p>
+                    <p class="quality-desc">{{UpdateData.Descrip1}}</p>
+                </div>
+                <div class="add-sec">
+                    <div class="qua-img">
+                        <img src="/static/images/icon/fast-deliveries.png" alt="">
+                    </div>
+                    <p class="quality-head">Faster Deliveries</p>
+                    <p class="quality-desc">{{UpdateData.Descrip2}}</p>
+                </div>
+                <div class="add-sec">
+                    <div class="qua-img">
+                        <img src="/static/images/icon/experiance.png" alt="">
+                    </div>
+                    <p class="quality-head">Serving from 5 years</p>
+                    <p class="quality-desc">{{UpdateData.Descrip3}}</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="w-head">
+        <p>whether</p>
+    </div>
+    <main class="container">
+        <div class="border-me">
+            <img src="/static/images/icon/whether-report.png" alt="">
+            <div class="h-btn">
+                <p>what is today's whether?</p>
+                <a href="/login/landing/Weather">click me</a>
+            </div>
+
+        </div>
+    </main>
+
+
+    <main class="all-content container ">
+        <div class="C-head">
+            <p>Crops</p>
+        </div>
+        <div class="crop-image">
+            <button value="Onion"><a href="/login/landing/onion"><img src="/static/images/crops/onion.jpg" alt=""></a></button>
+            <button value="Cotton"><a href="/login/landing/cotton"><img src="/static/images/crops/cotton.jpg" alt=""></a></button>
+            <button value="Watermelon"><a href="/login/landing/watermelon"><img src="/static/images/crops/Watermelon-Wallpapers.jpg" alt=""></a></button>
+            <button value="Tomato"><a href="/login/landing/tomato"><img src="/static/images/crops/tomato.jpg" alt=""></a></button>
+            <button value="4"><a href="/login/landing/pomogranet"><img src="/static/images/crops/pomogranet.jpg" alt=""></a></button>
+            <button value="5"><a href="/login/landing/grapes"><img src="/static/images/crops/grapes.jpg" alt=""></a></button>
+            <button value="6"><a href="/login/landing/corn"><img src="/static/images/crops/corn-cobs.jpg" alt=""></a></button>
+            <button value="7"><a href="/login/landing/sugarcane"><img src="/static/images/crops/Sugarcane.jpg" alt=""></a></button>
+            <button value="8"><a href="/login/landing/garlic"><img src="/static/images/crops/garlik.jpg" alt=""></a></button>
+            <button value="9"><a href="/login/landing/bringel"><img src="/static/images/crops/bringel.jpg" alt=""></a></button>
+            <button value="10"><a href="/login/landing/potato"><img src="/static/images/crops/Potato.jpg" alt=""></a></button>
+            <button value="11"><a href="/login/landing/chilly"><img src="/static/images/crops/Red chilly.jpg" alt=""></a></button>
+            <button value="12"><a href="/login/landing/capsicum"><img src="/static/images/crops/capsicum.jpg" alt=""></a></button>
+            <button value="13"><a href="/login/landing/cucumber"><img src="/static/images/crops/Cucumber.jpg" alt=""></a></button>
+            <button value="14"><a href="/login/landing/carrot"><img src="/static/images/crops/carrot.jpg" alt=""></a></button>
+
+            <button value="Cabage"><a href="/login/landing/cabage"><img src="/static/images/crops/cabage.jpg" alt=""></a></button>
+            <button value="CauliFlower" onclick="getval(this.value)"><img src="/static/images/crops/cauliFlower.jpg" alt=""></button>
+            <button value="Cluster bean" onclick="getval(this.value)"><img src="/static/images/crops/Cluster bean.jpg" alt=""></button>
+            <button value="Coriender" onclick="getval(this.value)"><img src="/static/images/crops/coriender.jpg" alt=""></button>
+            <button value="Custerd apple" onclick="getval(this.value)"><img src="/static/images/crops/custerd apple.jpg" alt=""></button>
+            <button value="Fenugreek" onclick="getval(this.value)"><img src="/static/images/crops/Fenugreek.jpg" alt=""></button>
+            <button value="Gauva" onclick="getval(this.value)"><img src="/static/images/crops/gauva.jpg" alt=""></button>
+            <button value="Ginger" onclick="getval(this.value)"><img src="/static/images/crops/ginger.jpg" alt=""></button>
+            <button value="Green chilly" onclick="getval(this.value)"><img src="/static/images/crops/Green chilly.jpg" alt=""></button>
+            <button value="Ground nut" onclick="getval(this.value)"><img src="/static/images/crops/ground nut.jpg" alt=""></button>
+            <button value="Lady finger" onclick="getval(this.value)"><img src="/static/images/crops/lady finger.jpg" alt=""></button>
+            <button value="Mango" onclick="getval(this.value)"><img src="/static/images/crops/mango.jpg" alt=""></button>
+            <button value="Palak" onclick="getval(this.value)"><img src="/static/images/crops/palak.jpg" alt=""></button>
+            <button value="Papaya" onclick="getval(this.value)"><img src="/static/images/crops/papaya.jpg" alt=""></button>
+            <button value="Pea plant" onclick="getval(this.value)"><img src="/static/images/crops/pea plant.jpg" alt=""></button>
+            <button value="Pinnaple" onclick="getval(this.value)"><img src="/static/images/crops/pinnaple.jpg" alt=""></button>
+            <button value="Wheatr" onclick="getval(this.value)"><img src="/static/images/crops/wheatr.jpg" alt=""></button>
+        
+        </div>
+    </main>
+
+
+    <footer id="contact-us">
+        <div class="container">
+            <p class="contact-head">contact us</p>
+            <div class="gird-contact">
+                <div class="quick-form">
+
+                    <h1>Quick contact</h1>
+                    <form action="/contact", method="post", class="form">
+                        <div class="input">
+                            <label for="name">Your Name</label>
+                            <input name="name" type="text" id="name" required>
+                        </div>
+                        <div class="input">
+                            <label for="email">Your Email</label>
+                            <input name="email" type="email" id="email" required>
+                        </div>
+                        <div class="input">
+                            <label for="extra">Your Message</label>
+                            <textarea name="extra" type="text" id="extra" required></textarea>
+                        </div>
+
+                        <div class="sub-btn">
+                            <input id="btn" type="submit" onclick="alertme()" value="submit" placeholder="Submit">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="address-details">
+                    <div id="ADDRESS">
+                        <h1 class="add-head">ADDRESS</h1>
+                        <div class="seperate">
+                            <span class="line"></span>
+                            <span id="square"></span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="add-details">
+                            <div class="main-details">
+                                <div class="location">
+                                    <i class='bx bx-location-plus'></i>
+                                    <h2>KRUSHI SEVAK</h2>
+                                </div>
+
+                                <p>Plot No. 14, Sector No. 2, NH 27,</p>
+                                <p>Gayatri nagar,</p>
+                                <p>Behind rajmata mangal karyalay,nashil</p>
+                                <p>(nashik) Dist. nashik (maharashtra).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="managing-div">
+                        <h1 class="add-head">MANAGING DIRECTOR</h1>
+                        <div class="seperate">
+                            <span class="line"></span>
+                            <span id="square"></span>
+                            <span class="line"></span>
+                        </div>
+
+                        <div class="director">
+                            <div class="dir" id="dir-one">
+                                <p class="dir-name">Pritesh Sonar</p>
+                                <p class="dir-num">+91 9370577854</p>
+                                <p class="dir-mail">priteshs2003@gmail.com</p>
+                            </div>
+
+                            <div class="dir" id="dir-two">
+                                <p class="dir-name">Chanaksh Metkar</p>
+                                <p class="dir-num">+91 7410757602</p>
+                                <p class="dir-mail">priteshs2003@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="contact-person">
+                        <h1 class="add-head">CONTACT PERSON</h1>
+                        <div class="seperate">
+                            <span class="line"></span>
+                            <span id="square"></span>
+                            <span class="line"></span>
+                        </div>
+
+                        <div class="conatact-me">
+                            <div class="con-person" id="con-one">
+                                <p>Siddhant Dalvi</p>
+                                <p>+91 8766441378</p>
+                            </div>
+                            <div class="con-person" id="con-one">
+                                <p>Abhishek pawar</p>
+                                <p>+91 8605771552</p>
+                            </div>
+                            <div class="con-person" id="con-one">
+                                <p>shruti pardeshi</p>
+                                <p>+91 8010465724</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mail-info">
+                        <h1 class="add-head">MAIL INFO</h1>
+                        <div class="seperate">
+                            <span class="line"></span>
+                            <span id="square"></span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="gmail-me">
+                            <i class='bx bxl-gmail'></i>
+                            <div class="gmial-me-on">
+                                <p>agro@gmail.com</p>
+                                <p>indianagro@gmial.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </footer>
+
+</body>
+<script src="/static/javascript/landing.js"></script>
+
+</html>

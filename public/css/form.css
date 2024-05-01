@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    row-gap: 2rem;
+    background:url('../images/background/order_form_back.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    max-width: 142rem;
+    margin: 0 auto;
+   
+}
+#head-div{
+    position: absolute;
+    top: 0;
+    font-size: 3rem;
+    text-align: center;
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+    width: 100%;
+   margin-bottom: 5rem;
+}
+
+#heading{
+    margin-bottom: 3.5rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+#my-form{
+    display: flex;
+    width: 40rem;
+    height: 50rem;
+    border: 0.5rem solid rgba(255,255,255,0.5);
+    flex-direction: column;
+    margin-top:5rem ;
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    
+
+}
+
+
+.input-div{
+ display: flex;
+ flex-direction: column;
+ width: 80%;
+}
+
+label{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+
+input{
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    padding: 1rem 1rem;
+    font-size: 1.6rem;
+}
+
+#btn{
+    width: 12rem;
+    font-size: 1.8rem;
+    height: 3rem;
+    background-color: rgb(245, 109, 109);
+    font-weight: 600;
+    color: white;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crops Details</title>
+    <link rel="stylesheet" href="/static/css/product_details.css">
+    <script src="/static/javascript/object.js"></script>
+</head>
+
+<body id="data-show-me">
+  
+</body>
+   <script type="text/javascript">
+    const obj= window.localStorage.getItem('intro-image');
+    // console.log(obj);
+    console.log(Crop[obj]);
+
+    const new_obj=Crop[obj];
+    
+    let ele=document.querySelector('#data-show-me');
+    let string=` <header class="container bg-color">
+    
+        <div class="heading">
+            <p>${new_obj['HeadingName']}</p>
+            
+        </div>
+    </header>
+
+    <div class="image-description container">
+        <div class="img-fluid">
+            <img src="${new_obj['MainImage']}" alt="">
+        </div>
+    </div>
+
+    <main class="content container">
+        <p class="advice">you can listen it</p>
+        <audio src="${new_obj['audio']}" controls></audio>
+
+        <div class="intro">
+            <p class="head-crop">${new_obj['HeadingName']}</p>
+            <p class="description">${new_obj['IntroDescription']} </p>
+        </div>
+        <div class="climate">
+            <p class="head-crop">climate</p>
+            <p class="description">${new_obj['Climate']}</p>
+        </div>
+
+        <div class="soli">
+            <p class="head-crop">soil</p>
+            <p class="description">${new_obj['Soil']} </p>
+        </div>
+    </main>
+
+    <main class="deases container">
+        <p class="head-crop">Crop Diseases</p>
+
+        <div class="one">
+
+            <li class="deases-head">${new_obj['Name1']}</li>
+            <div class="d-img">
+                <img class="deasese-img" src="${new_obj['Image1']}" alt="">5
+            </div>
+            <p class="description">${new_obj['Description1']}</p>
+
+            <div class="yt-solution">
+                <p>click here to watch solution</p>
+                <a href="${new_obj['video1']}">click me</a>
+            </div>
+        </div>
+        <div class="two">
+
+            <li class="deases-head">${new_obj['Name2']}</li>
+            <div class="d-img">
+                <img class="deasese-img" src="${new_obj['Image2']}" alt="">
+            </div>
+            <p class="description">${new_obj['Description2']}</p>
+
+            <div class="yt-solution">
+                <p>click here to watch solution</p>
+                <a href="${new_obj['video2']}">click me</a>
+            </div>
+
+        </div>
+
+        <div class="three">
+
+            <li class="deases-head">${new_obj['Name3']}</li>
+            <div class="d-img">
+                <img class="deasese-img" src="${new_obj['Image3']}" alt="">
+            </div>
+            <p class="description">${new_obj['Description3']} </p>
+
+            <div class="yt-solution">
+                <p>click here to watch solution</p>
+                <a href="${new_obj['video3']}">click me</a>
+            </div>
+        </div>
+
+        <div class="four">
+
+            <li class="deases-head">${new_obj['Name4']}</li>
+            <div class="d-img">
+                <img class="deasese-img" src="${new_obj['Image4']}" alt="">
+            </div>
+
+            <p class="description">${new_obj['Description4']}</p>
+
+            <div class="yt-solution">
+                <p>click here to watch solution</p>
+                <a href="${new_obj['video4']}">click me</a>
+            </div>
+        </div>
+    </main>`;
+
+     ele.innerHTML=string;
+
+   </script>
+</html>
